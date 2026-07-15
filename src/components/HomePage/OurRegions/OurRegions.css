@@ -1,0 +1,47 @@
+.our-regions {
+  background: var(--gradient-panel);
+  color: white;
+}
+
+.our-regions .section-label {
+  color: #9fe3df;
+}
+
+.our-regions .section-title {
+  color: white;
+  max-width: 22ch;
+}
+
+.our-regions__header {
+  margin-bottom: 2.5rem;
+}
+
+.our-regions__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.region-panel {
+  padding: 1.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+}
+
+.region-panel h3 {
+  font-size: 1.45rem;
+  margin-bottom: 0.85rem;
+}
+
+.region-panel p {
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.7;
+}
+
+@media (max-width: 720px) {
+  .our-regions__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,31 @@
+.introduction {
+  background: var(--gradient-soft);
+}
+
+.introduction__layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.introduction__body {
+  display: grid;
+  gap: 1.15rem;
+  color: var(--color-muted);
+  font-size: 1.02rem;
+}
+
+.introduction__goal {
+  color: var(--color-navy);
+  font-weight: 600;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-brand);
+}
+
+@media (max-width: 860px) {
+  .introduction__layout {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+}

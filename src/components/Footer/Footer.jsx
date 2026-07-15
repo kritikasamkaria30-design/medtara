@@ -1,0 +1,98 @@
+import "./Footer.css";
+
+const courseLinks = [
+  "Emergency & Safety Courses",
+  "Quality & Accreditation Courses",
+  "Hospital Administration Courses",
+  "TPA and Billing Courses",
+  "Nursing Skill Courses",
+  "Patient Safety",
+  "Infection Control Courses",
+];
+
+const resourceLinks = [
+  "Healthcare Insights",
+  "Infection Control Resources",
+  "Patient Safety Articles",
+  "Case Studies",
+  "Whitepapers",
+  "Learning Experience",
+];
+
+const solutionLinks = [
+  "Healthcare Training",
+  "Hospital Training Programs",
+  "Aged Care Training Programs",
+  "Training For Healthcare Professionals",
+  "Hospital Licensing Packages",
+  "Implementation Process",
+  "ROI For Hospitals",
+];
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="container footer__top">
+        <div className="footer__brand">
+          <a href="#top" className="footer__logo">
+            <span className="footer__mark" aria-hidden="true">
+              M
+            </span>
+            <span>
+              Med<span>Tara</span>
+            </span>
+          </a>
+          <p>
+            Empowering hospitals and healthcare professionals with smart, flexible
+            learning solutions to enhance skills, improve care, and drive innovation.
+          </p>
+        </div>
+
+        <div className="footer__col">
+          <h3>Courses</h3>
+          <ul>
+            {courseLinks.map((item) => (
+              <li key={item}>
+                <a href="#what-we-offer">{item}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="footer__col">
+          <h3>Resources</h3>
+          <ul>
+            {resourceLinks.map((item) => (
+              <li key={item}>
+                <a href="#introduction">{item}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="footer__col">
+          <h3>Solutions</h3>
+          <ul>
+            {solutionLinks.map((item) => (
+              <li key={item}>
+                <a href="#who-we-serve">{item}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="footer__bottom">
+        <div className="container footer__bottom-inner">
+          <p>© MedTara 2026. All rights reserved.</p>
+          <div className="footer__regions">
+            <span>India</span>
+            <span>Africa</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;
