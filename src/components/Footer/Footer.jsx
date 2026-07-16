@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const courseLinks = [
@@ -34,14 +35,14 @@ function Footer() {
     <footer className="footer">
       <div className="container footer__top">
         <div className="footer__brand">
-          <a href="#top" className="footer__logo">
+          <Link to="/" className="footer__logo">
             <span className="footer__mark" aria-hidden="true">
               M
             </span>
             <span>
               Med<span>Tara</span>
             </span>
-          </a>
+          </Link>
           <p>
             Empowering hospitals and healthcare professionals with smart, flexible
             learning solutions to enhance skills, improve care, and drive innovation.
@@ -53,7 +54,7 @@ function Footer() {
           <ul>
             {courseLinks.map((item) => (
               <li key={item}>
-                <a href="#what-we-offer">{item}</a>
+                <Link to="/#what-we-offer">{item}</Link>
               </li>
             ))}
           </ul>
@@ -64,7 +65,7 @@ function Footer() {
           <ul>
             {resourceLinks.map((item) => (
               <li key={item}>
-                <a href="#introduction">{item}</a>
+                <Link to="/#introduction">{item}</Link>
               </li>
             ))}
           </ul>
@@ -75,7 +76,7 @@ function Footer() {
           <ul>
             {solutionLinks.map((item) => (
               <li key={item}>
-                <a href="#who-we-serve">{item}</a>
+                <Link to="/#who-we-serve">{item}</Link>
               </li>
             ))}
           </ul>

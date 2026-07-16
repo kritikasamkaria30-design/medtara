@@ -1,0 +1,69 @@
+.red-chip {
+  background: var(--color-surface);
+}
+
+.red-chip__layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.red-chip__text {
+  margin-top: 1rem;
+  color: var(--color-muted);
+  line-height: 1.75;
+}
+
+.red-chip__expertise {
+  padding: 1.75rem 1.5rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  border-top: 3px solid var(--color-brand);
+}
+
+.red-chip__expertise h3 {
+  font-size: 1.1rem;
+  color: var(--color-navy);
+  margin-bottom: 1.1rem;
+}
+
+.red-chip__expertise ul {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.35rem;
+}
+
+.red-chip__expertise li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--color-muted);
+  line-height: 1.55;
+}
+
+.red-chip__expertise li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-brand);
+}
+
+.red-chip__note {
+  color: var(--color-navy);
+  font-weight: 500;
+  line-height: 1.65;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-line);
+}
+
+@media (max-width: 900px) {
+  .red-chip__layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
