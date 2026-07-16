@@ -204,3 +204,8 @@ ul {
     transition: none !important;
   }
 }
+
+.home-page,
+.about-page {
+  overflow-x: hidden;
+}

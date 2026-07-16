@@ -117,7 +117,8 @@
 }
 
 .nav-link:hover,
-.nav-link--dropdown:hover {
+.nav-link--dropdown:hover,
+.nav-link--active {
   color: var(--color-brand);
   background: var(--color-brand-soft);
 }

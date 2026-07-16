@@ -1,44 +1,45 @@
 import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const aboutLinks = [
-  { label: "About Us", href: "#introduction" },
-  { label: "Our Team", href: "#cta" },
-  { label: "Platform", href: "#what-we-offer" },
-  { label: "Certification Process", href: "#benefits" },
+  { label: "About Us", to: "/about-us" },
+  { label: "Our Team", to: "/about-us#medical-experts" },
+  { label: "Platform", to: "/about-us#partner" },
+  { label: "Certification Process", to: "/about-us#mission-vision" },
 ];
 
 const solutionLinks = [
-  { label: "Healthcare Training", href: "#modern-hospitals" },
-  { label: "Hospital Training Programs", href: "#who-we-serve" },
-  { label: "Aged Care Training Programs", href: "#who-we-serve" },
-  { label: "Training For Healthcare Professionals", href: "#who-we-serve" },
-  { label: "Hospital Licensing Packages", href: "#what-we-offer" },
-  { label: "Implementation Process", href: "#benefits" },
-  { label: "ROI for Hospital", href: "#benefits" },
+  { label: "Healthcare Training", to: "/#modern-hospitals" },
+  { label: "Hospital Training Programs", to: "/#who-we-serve" },
+  { label: "Aged Care Training Programs", to: "/#who-we-serve" },
+  { label: "Training For Healthcare Professionals", to: "/#who-we-serve" },
+  { label: "Hospital Licensing Packages", to: "/#what-we-offer" },
+  { label: "Implementation Process", to: "/#benefits" },
+  { label: "ROI for Hospital", to: "/#benefits" },
 ];
 
 const courseLinks = [
-  { label: "Emergency & Safety Courses", href: "#what-we-offer" },
-  { label: "Quality & Accreditation Courses", href: "#what-we-offer" },
-  { label: "Hospital Administration Courses", href: "#what-we-offer" },
-  { label: "TPA and Billing Courses", href: "#what-we-offer" },
-  { label: "Nursing Skill Courses", href: "#what-we-offer" },
-  { label: "Patient Safety", href: "#what-we-offer" },
-  { label: "Infection Control Courses", href: "#what-we-offer" },
+  { label: "Emergency & Safety Courses", to: "/#what-we-offer" },
+  { label: "Quality & Accreditation Courses", to: "/#what-we-offer" },
+  { label: "Hospital Administration Courses", to: "/#what-we-offer" },
+  { label: "TPA and Billing Courses", to: "/#what-we-offer" },
+  { label: "Nursing Skill Courses", to: "/#what-we-offer" },
+  { label: "Patient Safety", to: "/#what-we-offer" },
+  { label: "Infection Control Courses", to: "/#what-we-offer" },
 ];
 
 const resourceLinks = [
-  { label: "Healthcare Insights", href: "#introduction" },
-  { label: "Infection Control Resources", href: "#what-we-offer" },
-  { label: "Patient Safety Articles", href: "#what-we-offer" },
-  { label: "Healthcare Training Guides", href: "#modern-hospitals" },
-  { label: "Case Studies", href: "#regions" },
-  { label: "Whitepapers", href: "#benefits" },
-  { label: "Learning Experience", href: "#cta" },
+  { label: "Healthcare Insights", to: "/#introduction" },
+  { label: "Infection Control Resources", to: "/#what-we-offer" },
+  { label: "Patient Safety Articles", to: "/#what-we-offer" },
+  { label: "Healthcare Training Guides", to: "/#modern-hospitals" },
+  { label: "Case Studies", to: "/#regions" },
+  { label: "Whitepapers", to: "/#benefits" },
+  { label: "Learning Experience", to: "/#cta" },
 ];
 
-function NavDropdown({ label, items }) {
+function NavDropdown({ label, items, onNavigate }) {
   return (
     <li className="nav-item nav-item--dropdown">
       <button type="button" className="nav-link nav-link--dropdown">
@@ -48,7 +49,9 @@ function NavDropdown({ label, items }) {
       <ul className="nav-dropdown">
         {items.map((item) => (
           <li key={item.label}>
-            <a href={item.href}>{item.label}</a>
+            <Link to={item.to} onClick={onNavigate}>
+              {item.label}
+            </Link>
           </li>
         ))}
       </ul>
@@ -79,14 +82,14 @@ function Navbar() {
   return (
     <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
       <div className="container navbar__inner">
-        <a href="#top" className="navbar__brand" onClick={closeMenu}>
+        <Link to="/" className="navbar__brand" onClick={closeMenu}>
           <span className="navbar__mark" aria-hidden="true">
             M
           </span>
           <span className="navbar__name">
             Med<span>Tara</span>
           </span>
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -103,29 +106,44 @@ function Navbar() {
         <nav className={`navbar__nav ${open ? "is-open" : ""}`} aria-label="Primary">
           <ul className="nav-list">
             <li className="nav-item">
-              <a className="nav-link" href="#top" onClick={closeMenu}>
+              <NavLink
+                className={({ isActive }) =>
+                  `nav-link${isActive ? " nav-link--active" : ""}`
+                }
+                to="/"
+                end
+                onClick={closeMenu}
+              >
                 Home
-              </a>
+              </NavLink>
             </li>
-            <NavDropdown label="About" items={aboutLinks} />
-            <NavDropdown label="Solutions" items={solutionLinks} />
-            <NavDropdown label="Courses" items={courseLinks} />
+            <NavDropdown label="About" items={aboutLinks} onNavigate={closeMenu} />
+            <NavDropdown
+              label="Solutions"
+              items={solutionLinks}
+              onNavigate={closeMenu}
+            />
+            <NavDropdown label="Courses" items={courseLinks} onNavigate={closeMenu} />
             <li className="nav-item">
-              <a className="nav-link" href="#who-we-serve" onClick={closeMenu}>
+              <Link className="nav-link" to="/#who-we-serve" onClick={closeMenu}>
                 Community
-              </a>
+              </Link>
             </li>
-            <NavDropdown label="Resources" items={resourceLinks} />
+            <NavDropdown
+              label="Resources"
+              items={resourceLinks}
+              onNavigate={closeMenu}
+            />
             <li className="nav-item">
-              <a className="nav-link" href="#benefits" onClick={closeMenu}>
+              <Link className="nav-link" to="/#benefits" onClick={closeMenu}>
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
 
-          <a className="btn btn-primary navbar__cta" href="#cta" onClick={closeMenu}>
+          <Link className="btn btn-primary navbar__cta" to="/#cta" onClick={closeMenu}>
             Contact Us
-          </a>
+          </Link>
         </nav>
       </div>
     </header>
