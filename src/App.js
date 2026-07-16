@@ -4,8 +4,8 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Team from "./pages/Team";
 import "./App.css";
-
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about-us" element={<About />} />
+            <Route path="/our-team" element={<Team />} />
           </Routes>
         </main>
         <Footer />

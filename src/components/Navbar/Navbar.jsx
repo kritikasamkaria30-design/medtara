@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 const aboutLinks = [
   { label: "About Us", to: "/about-us" },
-  { label: "Our Team", to: "/about-us#medical-experts" },
+  { label: "Our Team", to: "/our-team" },
   { label: "Platform", to: "/about-us#partner" },
   { label: "Certification Process", to: "/about-us#mission-vision" },
 ];
