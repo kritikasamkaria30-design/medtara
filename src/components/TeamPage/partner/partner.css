@@ -1,0 +1,26 @@
+.main-partner {
+    display: flex;
+    gap: 20px;
+}
+
+.partner-container {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.partner-container p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+section.partner {
+    padding: 70px 0;
+    background: #edf6f9;
+}
+
+section.partner h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}

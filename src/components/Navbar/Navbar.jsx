@@ -5,12 +5,12 @@ import "./Navbar.css";
 const aboutLinks = [
   { label: "About Us", to: "/about-us" },
   { label: "Our Team", to: "/our-team" },
-  { label: "Platform", to: "/about-us#partner" },
-  { label: "Certification Process", to: "/about-us#mission-vision" },
+  { label: "Platform", to: "/platform" },
+  { label: "Certification Process", to: "/certification-process" },
 ];
 
 const solutionLinks = [
-  { label: "Healthcare Training", to: "/#modern-hospitals" },
+  { label: "Healthcare Training", to: "/healthcare-training" },
   { label: "Hospital Training Programs", to: "/#who-we-serve" },
   { label: "Aged Care Training Programs", to: "/#who-we-serve" },
   { label: "Training For Healthcare Professionals", to: "/#who-we-serve" },

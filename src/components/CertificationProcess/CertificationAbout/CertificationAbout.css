@@ -1,0 +1,34 @@
+
+.left {
+    display: flex;
+    gap: 48px;
+}
+
+section.CertificationAbout {
+    padding: 75px 0;
+}
+
+
+.about-cert-main {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.cert-content {}
+
+.cert-content li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    font-size: 16px;
+    gap: 13px;
+    line-height: 20px;
+}
+
+.cert-content span {
+    font-size: 23px;
+    margin: 10px 0 0;
+    display: block;
+    font-weight: 700;
+}
