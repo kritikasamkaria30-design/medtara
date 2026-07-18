@@ -1,0 +1,57 @@
+
+.left {
+    display: flex;
+    gap: 48px;
+}
+
+section.Platform-About {
+    padding: 75px 0;
+}
+
+.left img {
+    width: 46%;
+    height: 650px;
+    border-radius: 14px;
+}
+
+
+
+
+
+.Platform-container h3 {
+    font-size: 35px;
+    margin-top: 18px;
+}
+
+.Platform-container p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.Platform-container li {
+    font-size: 19px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 0px 0 10px;
+    gap: 11px;
+}
+
+.feature {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.Platform-container h4 {
+    margin-top: 25px;
+    font-size: 13px;
+}
+.right {
+    width: 50%;
+}
+.Platform-container ul {
+    margin-top: 19px;
+}

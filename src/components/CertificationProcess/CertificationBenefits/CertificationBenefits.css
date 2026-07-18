@@ -1,0 +1,25 @@
+.certifi-content {
+    display: flex;
+    gap: 20px;
+}
+
+section.CertificationBenefits {
+    background: #16556626;
+    padding: 75px 0;
+}
+
+.tanvi p {
+    margin-top: 15px;
+    font-size: 17px;
+} 
+
+.certifi-content li {
+    border-bottom: 1px solid #b7b7b7;
+    padding: 10px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.certifi-content li svg {
+    font-size: 32px;
+}
