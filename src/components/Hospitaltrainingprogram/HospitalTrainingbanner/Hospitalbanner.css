@@ -1,0 +1,20 @@
+
+.Hospital-banner {
+     background-image: url(../../../assets/images/medical-expert-patient-meeting-check-up-appointment-scaled.webp);
+    height: 350px;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section.Hospital-banner h1 {
+    color: white;
+    font-size: 45px;
+}
+section.Hospital-banner ul {
+    display: flex;
+    gap: 20px;
+    color: white;
+    margin-top: 14px;
+}

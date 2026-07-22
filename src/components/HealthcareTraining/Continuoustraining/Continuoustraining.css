@@ -1,0 +1,61 @@
+section.Continuoustraining {
+    background: #112850;
+    padding: 70px 0;
+}
+
+section.Continuoustraining .container {
+    display: flex;
+    gap: 40px;
+}
+
+.continuous-image {
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.continuous-image img {
+    border-radius: 15px;
+    height: 100%;
+}
+
+.training-content {
+    width: 100%;
+}
+
+.training-content h2 {
+    color: #fff;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 0.4px;
+}
+
+.training-content p {
+    color: #e1e1e1;
+    margin-top: 11px;
+    font-weight: 300;
+}
+
+.training-content h3 {
+    font-size: 20px;
+    margin-top: 18px;
+    color: #fff;
+}
+
+.training-content li {
+    color: #fff;
+    margin-top: 7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.training-content li svg {
+    color: #ffb100;
+    font-size: 12px;
+}
+
+.training-content {
+    margin: 10px 0;
+}
