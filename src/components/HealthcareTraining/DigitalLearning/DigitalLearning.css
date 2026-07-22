@@ -1,0 +1,46 @@
+section.DigitalLearning h2 {
+    font-size: 32px;
+    font-weight: 300;
+    align-items: center;
+    margin-top: 68px;
+}
+section.DigitalLearning p {
+    margin-top: 16px;
+}
+
+.learning-text p {
+    font-size: 15px;
+}
+
+.main-profession {
+    display: flex;
+    gap: 30px;
+    margin-top: 86px;
+    margin-bottom: 110px;
+}
+
+
+section.DigitalLearning span {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+section.DigitalLearning svg.icon {display: flex;}
+
+
+.digital-container {
+    background: #ffffff;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border-top: 4px solid #0d7377;
+    box-shadow: 0 0px 11px 0 #bbbbbb;
+}
+
+.digital-container svg.icon {
+    width: 40px;
+    height: 50px;
+    margin: 4px 0;
+}
+

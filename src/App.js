@@ -7,9 +7,11 @@ import About from "./pages/About";
 import Team from "./pages/Team";
 import Platform from "./pages/Platform";
 import CertificationProcess from "./pages/CertificationProcess";
-import HealthcareTraining from "./pages/HealthcareTraining";
+import HealthcareTraining from "./pages/HealthcareTraining"; 
+import HospitalTrainingprogram from "./pages/HospitalTrainingprogram";
 
 import "./App.css";
+
 function App() {
   return (
     <BrowserRouter>
@@ -24,6 +26,8 @@ function App() {
             <Route path="/platform" element={<Platform />} />
             <Route path="/certification-process" element={<CertificationProcess />} />
             <Route path="/healthcare-training" element={<HealthcareTraining />} />
+            <Route path="/hospital-training-program" element={<HospitalTrainingprogram />} />
+
           </Routes>
         </main>
         <Footer />

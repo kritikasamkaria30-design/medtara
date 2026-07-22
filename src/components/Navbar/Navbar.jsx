@@ -11,7 +11,7 @@ const aboutLinks = [
 
 const solutionLinks = [
   { label: "Healthcare Training", to: "/healthcare-training" },
-  { label: "Hospital Training Programs", to: "/#who-we-serve" },
+  { label: "Hospital Training Programs", to: "/hospital-training-program" },
   { label: "Aged Care Training Programs", to: "/#who-we-serve" },
   { label: "Training For Healthcare Professionals", to: "/#who-we-serve" },
   { label: "Hospital Licensing Packages", to: "/#what-we-offer" },
